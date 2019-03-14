@@ -8,12 +8,27 @@ import {
   SocialContainer,
   SocialContent,
 } from './Home.styles'
+import { isMobile } from 'react-device-detect'
 
 class Home extends Component {
+  state = {
+    social_links: [
+      {
+        name: 'linkedin',
+        icon: 'fa fa-linkedin',
+        link: 'https://www.linkedin.com/in/iamhaobui/',
+      },
+      {
+        name: 'github',
+        icon: 'fa fa-github',
+        link: 'https://github.com/iamhaobui',
+      },
+    ],
+  }
+
   render() {
     return (
       <Container>
-        <IntroOverlay />
         <IntroContainer>
           <IntroContent h5>Hello, World.</IntroContent>
           <IntroContent h1>I'm Hao Bui.</IntroContent>
@@ -23,25 +38,17 @@ class Home extends Component {
           <Button class="stroke smoothscroll" href="#about" title="">
             More About Me
           </Button>
-        </IntroContainer>
 
-        <SocialContainer>
-          <SocialContent href="#">
-            <i class="fa fa-facebook" />
-          </SocialContent>
-          <SocialContent href="#">
-            <i class="fa fa-behance" />
-          </SocialContent>
-          <SocialContent href="#">
-            <i class="fa fa-twitter" />
-          </SocialContent>
-          <SocialContent href="#">
-            <i class="fa fa-dribbble" />
-          </SocialContent>
-          <SocialContent href="#">
-            <i class="fa fa-instagram" />
-          </SocialContent>
-        </SocialContainer>
+          <SocialContainer>
+            {this.state.social_links.map(social => {
+              return (
+                <SocialContent target="new" href={social.link}>
+                  <i class={social.icon} />
+                </SocialContent>
+              )
+            })}
+          </SocialContainer>
+        </IntroContainer>
       </Container>
     )
   }

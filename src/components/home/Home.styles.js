@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import img from '../../images/intro-bg.jpg'
 
 export const Container = styled.div`
-  background: #151515 url(${img}) no-repeat center bottom;
+  background: black url(${img}) no-repeat center bottom;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -11,7 +11,6 @@ export const Container = styled.div`
   height: 100%;
   min-height: 720px;
   display: table;
-  position: relative;
   text-align: center;
 `
 
@@ -27,11 +26,15 @@ export const IntroOverlay = styled.div`
 
 export const IntroContainer = styled.div`
   display: table-cell;
+  flex-direction: column;
   vertical-align: middle;
   text-align: center;
   -webkit-transform: translateY(-2.1rem);
   -ms-transform: translateY(-2.1rem);
   transform: translateY(-2.1rem);
+  @media (max-width: 768px) {
+    padding-top: 30%;
+  }
 `
 
 export const IntroContent = styled.div`
@@ -68,8 +71,6 @@ export const Button = styled.a`
 `
 
 export const SocialContainer = styled.div`
-  display: block;
-  position: absolute;
   width: 100%;
   left: 0;
   bottom: 7.2rem;
