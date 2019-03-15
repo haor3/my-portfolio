@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import Grid from '@material-ui/core/Grid'
 import Avatar from '@material-ui/core/Avatar'
 
 export const Container = styled.div`
@@ -10,14 +9,25 @@ export const Container = styled.div`
 export const Introduce = styled.div`
   line-eight: 110px;
   display: flex;
-  justify-content: center
-    margin: 0px 20px
-    align-items
-    @media (max-width: 768px) {
+  justify-content: center;
+  margin: 0px 20px;
+  text-align: center @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
+`
+
+export const Paragraph = styled.p`
+  color: #6e6e6e;
+`
+export const H3 = styled.h3`
+  font-family: poppins-bold;
+  font-size: ${props => (props.small ? '1.4rem' : '1.8rem')};
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  display: ${props => (props.small ? 'contents' : '')};
+  color: ${props => (props.color ? props.color : '')};
 `
 
 export const Detail = styled.div`
@@ -26,7 +36,7 @@ export const Detail = styled.div`
   justify-content: space-evenly;
 `
 
-export const Button = styled.div`
+export const ButtonContainer = styled.div`
   line-height: 110px;
   display: flex;
   justify-content: center;
@@ -57,4 +67,19 @@ export const DetailContent = styled.div`
   text-align: left;
   line-height: 100%;
   padding: 5% 10%;
+`
+export const PercentBox = styled.span`
+  margin-bottom: 10px;
+  width: fit-content;
+  margin-right: ${props => 95 - props.marginRight}%;
+  right: 0;
+  top: -3.6rem;
+  display: block;
+  font-family: 'poppins-regular', sans-serif;
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1;
+  background: #313131;
+  padding: 0.6rem 0.6rem;
+  border-radius: 3px;
 `

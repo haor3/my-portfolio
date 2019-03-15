@@ -1,17 +1,26 @@
 import React, { Component } from 'react'
 import img from '../../images/profile.jpg'
-import Grid from '@material-ui/core/Grid'
 import {
   Container,
   Introduce,
   Content,
   Detail,
-  Button,
+  Paragraph,
   AvatarStyle,
   DetailContent,
+  PercentBox,
+  H3,
+  SmallH3,
 } from './About.styles.js'
-import SkillBar from 'react-skillbars'
-import { ProgressBar } from 'react-bootstrap'
+
+import { LinearProgress } from '@material-ui/core'
+import { withStyles } from '@material-ui/core/styles'
+
+const styles = {
+  linearBarColorPrimary: {
+    backgroundColor: '#cc005f',
+  },
+}
 
 class About extends Component {
   state = {
@@ -19,10 +28,6 @@ class About extends Component {
       {
         type: 'MERN',
         level: 85,
-      },
-      {
-        type: 'Material UI',
-        level: 80,
       },
       {
         type: ' Git',
@@ -41,68 +46,96 @@ class About extends Component {
         level: 75,
       },
     ],
+    details: [
+      {
+        title: 'profile',
+        content: `A full stack developer who graduated from GBC seeks to develop knowledge, skills, relationships 
+        with intelligent and talented people.`,
+      },
+      {
+        title: 'fullname',
+        content: 'Hao Bui',
+      },
+      {
+        title: 'job',
+        content: 'Full Stack Developer',
+      },
+      {
+        title: 'email',
+        content: 'iamhaobui@gmail.com',
+      },
+    ],
   }
 
   render() {
+    const { classes } = this.props
+
     return (
       <Container>
         <Introduce>
           <AvatarStyle alt="avatar" src={img} />
           <Content>
-            <h3>About Me</h3>
-            <h1>Let me introduce myself</h1>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-            </p>
+            <H3 small color="#cc005f">
+              About Me
+            </H3>
+            <H3>LET ME INTRODUCE MYSELF</H3>
+            <Paragraph>
+              " Work like hell. You just have to put in 80 to 100 hour weeks
+              every week. This improves the odds of success. If other people are
+              putting in 40 hour workweeks and you're putting in 100 hour
+              workweeks, then even if you're doing the same thing, you know that
+              you will achieve in four months what it takes them a year to
+              achieve."
+              <br />
+              By <i>Elon Musk, CEO of Tesla</i>
+            </Paragraph>
           </Content>
         </Introduce>
 
         <Detail>
           <DetailContent>
-            <h3>PROFILE</h3>
-            <p>
-              Lorem ipsum Qui veniam ut consequat ex ullamco nulla in non ut
-              esse in magna sint minim officia consectetur nisi commodo ea magna
-              pariatur nisi cillum.
-            </p>
-            <h3>FULLNAME</h3>
-            <p>Hao Bui</p>
-            <h3>JOB</h3>
-            <p>Full Stack Developer</p>
-            <h3>EMAIL</h3>
-            <p>iamhaobui@gmail.com</p>
+            {this.state.details.map(d => {
+              return (
+                <div>
+                  {d.title === 'profile' ? (
+                    <H3>{d.title}</H3>
+                  ) : (
+                    <H3 small>{d.title}</H3>
+                  )}
+                  <Paragraph>{d.content}</Paragraph>
+                </div>
+              )
+            })}
           </DetailContent>
+
           <DetailContent>
-            {/* <h3>SKILLS</h3>
-              <p>
-              Lorem ipsum Qui veniam ut consequat ex ullamco nulla in non ut esse in magna sint minim officia consectetur nisi commodo ea magna pariatur nisi cillum.
-              </p>
-            <h3>FULLNAME</h3>
-              <p>Hao Bui</p>
-            <h3>JOB</h3>
-              <p>Full Stack Developer</p>
-            <h3>EMAIL</h3>
-              <p>iamhaobui@gmail.com</p> */}
-            <h3>SKILLS</h3>
-            <SkillBar skills={this.state.skills} />
-            <h2>Java</h2>
-            <ProgressBar animated now={45} />
+            <H3>SKILLS</H3>
+            {this.state.skills.map(s => {
+              return (
+                <div style={{ marginTop: '10px' }}>
+                  <div
+                    style={{ display: 'flex', justifyContent: 'space-between' }}
+                  >
+                    <H3 small>{s.type}</H3>
+                    <PercentBox marginRight={s.level}>{s.level}%</PercentBox>
+                  </div>
+
+                  <LinearProgress
+                    classes={{
+                      // colorPrimary: classes.linearColorPrimary,
+                      barColorPrimary: classes.linearBarColorPrimary,
+                    }}
+                    variant="determinate"
+                    value={s.level}
+                  />
+                </div>
+              )
+            })}
           </DetailContent>
         </Detail>
-
-        <Button>button</Button>
       </Container>
     )
   }
 }
 
-export default About
+export default withStyles(styles)(About)

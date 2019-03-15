@@ -5,9 +5,9 @@
   "dependencies": {
     "@material-ui/core": "^3.9.2",
     "@material-ui/icons": "^3.0.2",
+    "bootstrap": "^4.3.1",
     "react": "^16.8.3",
     "react-bootstrap": "^1.0.0-beta.5",
-    "react-device-detect": "^1.6.2",
     "react-dom": "^16.8.3",
     "react-scripts": "2.1.5",
     "react-skillbars": "^1.5.1",

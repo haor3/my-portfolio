@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import './App.css'
+import './App.styles'
 
 import Navigation from './components/navigation/Navigation'
 import Home from './components/home/Home'
 import About from './components/about/About'
-
+import Resume from './components/resume/Resume'
 class App extends Component {
   render() {
     return (
@@ -12,6 +12,7 @@ class App extends Component {
         <Navigation />
         <Home />
         <About />
+        <Resume />
       </div>
     )
   }

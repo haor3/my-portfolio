@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import List from '@material-ui/core/List'
 
 export const Container = styled.div`
   display: block;
@@ -9,4 +10,11 @@ export const Container = styled.div`
   top: 0;
   position: fixed;
   z-index: 600;
+`
+
+export const ListStyle = styled(List)`
+  flexgrow: 1;
+  width: 200px;
+  background-color: black;
+  color: white !important;
 `

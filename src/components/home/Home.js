@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
 import {
   IntroContainer,
-  IntroOverlay,
   Container,
   IntroContent,
   Button,
   SocialContainer,
   SocialContent,
 } from './Home.styles'
-import { isMobile } from 'react-device-detect'
 
 class Home extends Component {
   state = {

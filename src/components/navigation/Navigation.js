@@ -9,22 +9,12 @@ import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import Collapse from '@material-ui/core/Collapse'
 
-import { Container } from './Navigation.styles'
-const styles = {
-  root: {
-    flexGrow: 1,
-    width: '200px',
-    backgroundColor: 'black',
-    color: 'white !important',
-  },
-  menuButton: {
-    color: '#FF0077',
-  },
-}
+import { Container, ListStyle } from './Navigation.styles'
 
 class Navigation extends React.Component {
   state = {
-    open: true,
+    open: false,
+    items: ['Home', 'About', 'Resume', 'Portfolio', 'Contact'],
   }
 
   handleClick = () => {
@@ -32,44 +22,30 @@ class Navigation extends React.Component {
   }
 
   render() {
-    const { classes } = this.props
-
     return (
       <Container>
-        <List component="nav" className={classes.root}>
+        <ListStyle component="nav">
           <ListItem button onClick={this.handleClick}>
-            <ListItemIcon className={classes.menuButton} aria-label="Menu">
+            <ListItemIcon style={{ color: '#FF0077' }} aria-label="Menu">
               <MenuIcon />
             </ListItemIcon>
             <ListItemText disableTypography primary="HAO BUI" />
           </ListItem>
-          <Collapse in={this.state.open} timeout="auto" unmountOnExit>
+          <Collapse in={this.state.open} timeout="auto">
             <List component="div" disablePadding>
-              <ListItem button>
-                <ListItemText disableTypography inset primary="Home" />
-              </ListItem>
-              <ListItem button>
-                <ListItemText disableTypography inset primary="About" />
-              </ListItem>
-              <ListItem button>
-                <ListItemText disableTypography inset primary="Resume" />
-              </ListItem>
-              <ListItem button>
-                <ListItemText disableTypography inset primary="Portfolio" />
-              </ListItem>
-              <ListItem button>
-                <ListItemText disableTypography inset primary="Contact" />
-              </ListItem>
+              {this.state.items.map(item => {
+                return (
+                  <ListItem button>
+                    <ListItemText disableTypography inset primary={item} />
+                  </ListItem>
+                )
+              })}
             </List>
           </Collapse>
-        </List>
+        </ListStyle>
       </Container>
     )
   }
 }
 
-Navigation.propTypes = {
-  classes: PropTypes.object.isRequired,
-}
-
-export default withStyles(styles)(Navigation)
+export default Navigation
