@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react'
 
 export const Container = styled.div`
   flex-direction: column;

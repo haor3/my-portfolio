@@ -26,7 +26,7 @@ class Navigation extends React.Component {
       <Container>
         <ListStyle component="nav">
           <ListItem button onClick={this.handleClick}>
-            <ListItemIcon style={{ color: '#FF0077' }} aria-label="Menu">
+            <ListItemIcon style={{ color: '#e86971' }} aria-label="Menu">
               <MenuIcon />
             </ListItemIcon>
             <ListItemText disableTypography primary="HAO BUI" />

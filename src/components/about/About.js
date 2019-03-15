@@ -18,7 +18,7 @@ import { withStyles } from '@material-ui/core/styles'
 
 const styles = {
   linearBarColorPrimary: {
-    backgroundColor: '#cc005f',
+    backgroundColor: '#e86971',
   },
 }
 
@@ -75,7 +75,7 @@ class About extends Component {
         <Introduce>
           <AvatarStyle alt="avatar" src={img} />
           <Content>
-            <H3 small color="#cc005f">
+            <H3 small color="#e86971">
               About Me
             </H3>
             <H3>LET ME INTRODUCE MYSELF</H3>
@@ -98,7 +98,7 @@ class About extends Component {
               return (
                 <div>
                   {d.title === 'profile' ? (
-                    <H3>{d.title}</H3>
+                    <H3 color="#e86971">{d.title}</H3>
                   ) : (
                     <H3 small>{d.title}</H3>
                   )}
@@ -109,7 +109,7 @@ class About extends Component {
           </DetailContent>
 
           <DetailContent>
-            <H3>SKILLS</H3>
+            <H3 color="#e86971">SKILLS</H3>
             {this.state.skills.map(s => {
               return (
                 <div style={{ marginTop: '10px' }}>
@@ -122,7 +122,6 @@ class About extends Component {
 
                   <LinearProgress
                     classes={{
-                      // colorPrimary: classes.linearColorPrimary,
                       barColorPrimary: classes.linearBarColorPrimary,
                     }}
                     variant="determinate"

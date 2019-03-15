@@ -11,7 +11,8 @@ export const Introduce = styled.div`
   display: flex;
   justify-content: center;
   margin: 0px 20px;
-  text-align: center @media (max-width: 768px) {
+  text-align: center;
+  @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -32,8 +33,26 @@ export const H3 = styled.h3`
 
 export const Detail = styled.div`
   line-height: 500px;
-  display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+  }
+`
+export const DetailContent = styled.div`
+  flex-direction: column;
+  line-height: 0;
+  width: 50%;
+  text-align: left;
+  line-height: 100%;
+  padding: 5% 10%;
+  @media (max-width: 768px) {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
 `
 
 export const ButtonContainer = styled.div`
@@ -60,14 +79,6 @@ export const Content = styled.div`
   }
 `
 
-export const DetailContent = styled.div`
-  flex-direction: column;
-  line-height: 0;
-  width: 50%;
-  text-align: left;
-  line-height: 100%;
-  padding: 5% 10%;
-`
 export const PercentBox = styled.span`
   margin-bottom: 10px;
   width: fit-content;

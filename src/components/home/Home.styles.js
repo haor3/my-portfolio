@@ -38,7 +38,7 @@ export const IntroContainer = styled.div`
 `
 
 export const IntroContent = styled.div`
-  color: ${props => (props.h1 ? '#FFFFFF' : props.h5 ? '#cc005f' : '#FFFFFF')};
+  color: ${props => (props.h1 ? '#FFFFFF' : props.h5 ? '#e86971' : '#FFFFFF')};
   font-family: ${props =>
     props.h1 ? 'poppins-medium' : props.h5 ? 'poppins-bold' : 'lora-regular'};
   font-size: ${props => (props.h1 ? '8.4rem' : props.h5 ? '2.3rem' : '1.7rem')}
