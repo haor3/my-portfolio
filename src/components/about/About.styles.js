@@ -35,10 +35,12 @@ export const Detail = styled.div`
   line-height: 500px;
   flex-direction: row;
   justify-content: space-evenly;
+  display: flex;
   @media (max-width: 768px) {
     flex-direction: column;
     justify-content: center;
     margin: 10px;
+    display: '';
   }
 `
 export const DetailContent = styled.div`

@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import { GridList, GridListTile } from '@material-ui/core'
+import GridListTileBar from '@material-ui/core/GridListTileBar'
 
 export const Container = styled.div`
   flex-direction: column;
@@ -28,4 +30,28 @@ export const Experience = styled.div`
 export const Education = styled.div`
   display: flex;
   justify-content: space-evenly;
+`
+export const Img = styled.img`
+  max-width: 100%;
+  max-height: 100%;
+`
+
+export const GridListContainer = styled.div`
+  display: flex;
+  flexwrap: wrap;
+  justify-content: space-around;
+  over-flow: hidden;
+`
+
+export const GridListStyle = styled(GridList)`
+    width: 500,
+    height: 450,
+`
+
+export const GridListTileStyle = styled(GridListTile)`
+  :hover {
+    ${Img}: {
+      opacity: 0.3;
+    };
+  }
 `

@@ -1,8 +1,7 @@
 import styled from 'styled-components'
-import img from '../../images/intro-bg.jpg'
 
 export const Container = styled.div`
-  background: black url(${img}) no-repeat center bottom;
+  background: black url('images/intro-bg.jpg') no-repeat center bottom;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;

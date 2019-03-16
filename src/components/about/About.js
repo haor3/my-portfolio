@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import img from '../../images/profile.jpg'
 import {
   Container,
   Introduce,
@@ -73,7 +72,7 @@ class About extends Component {
     return (
       <Container>
         <Introduce>
-          <AvatarStyle alt="avatar" src={img} />
+          <AvatarStyle alt="avatar" src="images/portfolio/profile.jpg" />
           <Content>
             <H3 small color="#e86971">
               About Me
@@ -87,7 +86,10 @@ class About extends Component {
               you will achieve in four months what it takes them a year to
               achieve."
               <br />
-              By <i>Elon Musk, CEO of Tesla</i>
+              By{' '}
+              <i>
+                <b>Elon Musk, CEO of Tesla</b>
+              </i>
             </Paragraph>
           </Content>
         </Introduce>

@@ -1,13 +1,5 @@
 import React, { Component } from 'react'
-import {
-  Container,
-  Paragraph,
-  H3,
-  Detail,
-  Experience,
-  Education,
-  TimelineStyle,
-} from '../resume/Resume.styles'
+import { Container, Paragraph, H3, Detail } from '../resume/Resume.styles'
 import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react'
 
 class Resume extends Component {
@@ -96,7 +88,9 @@ class Resume extends Component {
                   style={{ color: '#e86971' }}
                 >
                   <h3>{exp.company}</h3>
-                  <h4>{exp.title}</h4>
+                  <h4>
+                    <i>{exp.title}</i>
+                  </h4>
                   <ul>
                     {exp.description.map(des => {
                       return <li>{des}</li>
@@ -120,7 +114,9 @@ class Resume extends Component {
                   style={{ color: '#e86971' }}
                 >
                   <h3>{sch.name}</h3>
-                  <h4>{sch.major}</h4>
+                  <h4>
+                    <i>{sch.major}</i>
+                  </h4>
                   <ul>
                     {sch.gpa !== '' && (
                       <li>

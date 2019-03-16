@@ -5,6 +5,8 @@ import Navigation from './components/navigation/Navigation'
 import Home from './components/home/Home'
 import About from './components/about/About'
 import Resume from './components/resume/Resume'
+import Portfolio from './components/portfolio/Portfolio'
+
 class App extends Component {
   render() {
     return (
@@ -13,6 +15,7 @@ class App extends Component {
         <Home />
         <About />
         <Resume />
+        <Portfolio />
       </div>
     )
   }
