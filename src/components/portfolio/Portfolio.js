@@ -54,7 +54,12 @@ const datas = [
     cols: 1,
     link: 'https://github.com/tddag/conferenceApp',
   },
-
+  {
+    name: `Porfolio - React`,
+    imageURL: 'images/portfolio/portfolio.png',
+    cols: 1,
+    link: 'https://github.com/iamhaobui/my-portfolio',
+  },
   {
     name: `Capstone Project - MEAN Stack`,
     imageURL: 'images/portfolio/capstone.png',
@@ -66,7 +71,7 @@ const datas = [
 class Portfolio extends Component {
   render() {
     return (
-      <Container>
+      <Container id="portfolio">
         <H3 small color="#e86971">
           Portfolio
         </H3>
@@ -76,8 +81,10 @@ class Portfolio extends Component {
             <GridListStyle cellHeight={160} cols={3}>
               {datas.map((d, index) => (
                 <GridListTileStyle key={index} cols={d.cols || 1}>
-                  <Img src={d.imageURL} alt={d.name} />
-                  <GridListTileBar title={d.name} />
+                  <a href={d.link} target="_blank" rel="noopener noreferrer">
+                    <Img src={d.imageURL} alt={d.name} />
+                    <GridListTileBar title={d.name} />
+                  </a>
                 </GridListTileStyle>
               ))}
             </GridListStyle>

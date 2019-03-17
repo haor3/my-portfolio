@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { GridList, GridListTile } from '@material-ui/core'
 
-export const Container = styled.div`
+export const Container = styled.section`
   flex-direction: column;
   min-height: 720px;
   text-align: center;

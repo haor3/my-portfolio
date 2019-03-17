@@ -85,7 +85,7 @@ class About extends Component {
     const { classes } = this.props
 
     return (
-      <Container>
+      <Container id="about">
         <Introduce>
           <AvatarStyle alt="avatar" src="images/portfolio/profile.jpg" />
           <Content>
@@ -94,16 +94,12 @@ class About extends Component {
             </H3>
             <H3>LET ME INTRODUCE MYSELF</H3>
             <Paragraph>
-              " Work like hell. You just have to put in 80 to 100 hour weeks
-              every week. This improves the odds of success. If other people are
-              putting in 40 hour workweeks and you're putting in 100 hour
-              workweeks, then even if you're doing the same thing, you know that
-              you will achieve in four months what it takes them a year to
-              achieve."
+              “Success is not final, failure is not fatal: it is the courage to
+              continue that counts.”
               <br />
               By{' '}
               <i>
-                <b>Elon Musk, CEO of Tesla</b>
+                <b>Winston Churchill</b>
               </i>
             </Paragraph>
           </Content>

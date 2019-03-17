@@ -9,6 +9,8 @@
     "react": "^16.8.3",
     "react-bootstrap": "^1.0.0-beta.5",
     "react-dom": "^16.8.3",
+    "react-router-dom": "^4.4.0",
+    "react-router-hash-link": "^1.2.1",
     "react-scripts": "2.1.5",
     "react-skillbars": "^1.5.1",
     "react-vertical-timeline": "^0.2.0",

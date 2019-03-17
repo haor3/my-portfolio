@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import List from '@material-ui/core/List'
+import { HashLink as Link } from 'react-router-hash-link'
 
 export const Container = styled.div`
   display: block;
@@ -19,4 +20,9 @@ export const ListStyle = styled(List)`
   color: white !important;
   padding-bottom: 0 !important;
   padding-top: 0 !important;
+`
+
+export const LinkStyle = styled(Link)`
+  text-decoration: none;
+  color: white;
 `

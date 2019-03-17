@@ -1,6 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { withStyles } from '@material-ui/core/styles'
 import MenuIcon from '@material-ui/icons/Menu'
 
 import List from '@material-ui/core/List'
@@ -9,7 +7,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import Collapse from '@material-ui/core/Collapse'
 
-import { Container, ListStyle } from './Navigation.styles'
+import { Container, ListStyle, LinkStyle } from './Navigation.styles'
 
 class Navigation extends React.Component {
   state = {
@@ -35,9 +33,11 @@ class Navigation extends React.Component {
             <List component="div" disablePadding>
               {this.state.items.map(item => {
                 return (
-                  <ListItem button>
-                    <ListItemText disableTypography inset primary={item} />
-                  </ListItem>
+                  <LinkStyle to={`#${item.toLowerCase()}`}>
+                    <ListItem button>
+                      <ListItemText disableTypography inset primary={item} />
+                    </ListItem>
+                  </LinkStyle>
                 )
               })}
             </List>

@@ -6,17 +6,19 @@ import Home from './components/home/Home'
 import About from './components/about/About'
 import Resume from './components/resume/Resume'
 import Portfolio from './components/portfolio/Portfolio'
+import { Route, Switch } from 'react-router-dom'
+import { HashLink as Link } from 'react-router-hash-link'
 
 class App extends Component {
   render() {
     return (
-      <div>
+      <section>
         <Navigation />
-        <Home />
-        <About />
-        <Resume />
-        <Portfolio />
-      </div>
+        <Route to="/" component={Home} />
+        <Route to="about" component={About} />
+        <Route to="resume" component={Resume} />
+        <Route to="portfolio" component={Portfolio} />
+      </section>
     )
   }
 }

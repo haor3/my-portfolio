@@ -26,7 +26,7 @@ class Home extends Component {
 
   render() {
     return (
-      <Container>
+      <Container id="home">
         <IntroContainer>
           <IntroContent h5>Hello, World.</IntroContent>
           <IntroContent h1>I'm Hao Bui.</IntroContent>

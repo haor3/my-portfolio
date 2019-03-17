@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Avatar from '@material-ui/core/Avatar'
 
-export const Container = styled.div`
+export const Container = styled.section`
   flex-direction: column;
   min-height: 720px;
   margin-top: 20px;
@@ -72,14 +72,14 @@ export const AvatarStyle = styled(Avatar)`
   width: 120px !important;
   height: 120px !important;
   position: relative;
-  top: 120px;
+  top: 60px;
   @media (max-width: 768px) {
     top: 0;
   }
 `
 
 export const Content = styled.div`
-  width: 50%;
+  width: 100%;
   @media (max-width: 768px) {
     width: 100%;
   }

@@ -66,7 +66,7 @@ class Resume extends Component {
 
   render() {
     return (
-      <Container>
+      <Container id="resume">
         <br />
         <H3 small color="#e86971">
           Resume
