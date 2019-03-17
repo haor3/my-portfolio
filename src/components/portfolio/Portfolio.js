@@ -55,7 +55,7 @@ const datas = [
     link: 'https://github.com/tddag/conferenceApp',
   },
   {
-    name: `Porfolio - React`,
+    name: `Portfolio - React`,
     imageURL: 'images/portfolio/portfolio.png',
     cols: 1,
     link: 'https://github.com/iamhaobui/my-portfolio',
