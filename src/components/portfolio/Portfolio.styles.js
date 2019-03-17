@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 import { GridList, GridListTile } from '@material-ui/core'
-import GridListTileBar from '@material-ui/core/GridListTileBar'
 
 export const Container = styled.div`
   flex-direction: column;
-  min-eight: 720px;
+  min-height: 720px;
   text-align: center;
+  margin-top: 20px;
 `
 
 export const Paragraph = styled.p`
@@ -39,19 +39,15 @@ export const Img = styled.img`
 export const GridListContainer = styled.div`
   display: flex;
   flexwrap: wrap;
-  justify-content: space-around;
+  margin: 0 auto;
   over-flow: hidden;
+  width: 750px;
+  text-align: center;
 `
 
 export const GridListStyle = styled(GridList)`
-    width: 500,
-    height: 450,
+  width: 750;
+  height: 450;
 `
 
-export const GridListTileStyle = styled(GridListTile)`
-  :hover {
-    ${Img}: {
-      opacity: 0.3;
-    };
-  }
-`
+export const GridListTileStyle = styled(GridListTile)``

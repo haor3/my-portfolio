@@ -2,8 +2,9 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   flex-direction: column;
-  min-eight: 720px;
+  min-height: 720px;
   text-align: center;
+  background: #ebebeb;
 `
 
 export const Paragraph = styled.p`
@@ -21,6 +22,7 @@ export const H3 = styled.h3`
 `
 
 export const Detail = styled.div``
+
 export const Experience = styled.div`
   display: flex;
   justify-content: space-evenly;

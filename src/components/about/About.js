@@ -9,7 +9,9 @@ import {
   DetailContent,
   PercentBox,
   H3,
-  SmallH3,
+  Misc,
+  Strength,
+  AvatarStrength,
 } from './About.styles.js'
 
 import { LinearProgress } from '@material-ui/core'
@@ -18,6 +20,9 @@ import { withStyles } from '@material-ui/core/styles'
 const styles = {
   linearBarColorPrimary: {
     backgroundColor: '#e86971',
+  },
+  images: {
+    objectFit: 'scale-down',
   },
 }
 
@@ -48,7 +53,7 @@ class About extends Component {
     details: [
       {
         title: 'profile',
-        content: `A full stack developer who graduated from GBC seeks to develop knowledge, skills, relationships 
+        content: `A Junior Full Stack Developer who graduated from GBC seeks to develop knowledge, skills, relationships 
         with intelligent and talented people.`,
       },
       {
@@ -63,6 +68,16 @@ class About extends Component {
         title: 'email',
         content: 'iamhaobui@gmail.com',
       },
+    ],
+    strengths: [
+      'images/strengths/mern.jpg',
+      'images/strengths/styled-component.png',
+      'images/strengths/material-ui.png',
+      'images/strengths/mongodb.png',
+      'images/strengths/sql.png',
+      'images/strengths/android.png',
+      'images/strengths/git.png',
+      'images/strengths/heroku.jpg',
     ],
   }
 
@@ -134,6 +149,21 @@ class About extends Component {
             })}
           </DetailContent>
         </Detail>
+
+        <Misc>
+          <H3 color="#e86971">Strength</H3>
+          <Strength>
+            {this.state.strengths.map(s => {
+              return (
+                <AvatarStrength
+                  classes={{ img: classes.images }}
+                  alt="skill"
+                  src={s}
+                />
+              )
+            })}
+          </Strength>
+        </Misc>
       </Container>
     )
   }

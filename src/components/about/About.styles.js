@@ -2,8 +2,11 @@ import styled from 'styled-components'
 import Avatar from '@material-ui/core/Avatar'
 
 export const Container = styled.div`
-  flex-direction: row;
-  min-eight: 720px;
+  flex-direction: column;
+  min-height: 720px;
+  margin-top: 20px;
+  align-items: center;
+  display: flex;
 `
 
 export const Introduce = styled.div`
@@ -29,6 +32,7 @@ export const H3 = styled.h3`
   letter-spacing: 0.25rem;
   display: ${props => (props.small ? 'contents' : '')};
   color: ${props => (props.color ? props.color : '')};
+  text-align: center;
 `
 
 export const Detail = styled.div`
@@ -95,4 +99,19 @@ export const PercentBox = styled.span`
   background: #313131;
   padding: 0.6rem 0.6rem;
   border-radius: 3px;
+`
+
+export const Misc = styled.div`
+  flex-direction: column;
+  display: flex;
+`
+
+export const Strength = styled.div`
+  display: flex;
+`
+
+export const AvatarStrength = styled(Avatar)`
+  padding: 20px;
+  width: 100px !important;
+  height: 100px !important;
 `

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container, Paragraph, H3, Detail } from '../resume/Resume.styles'
+import { Container, Paragraph, H3, Detail, Misc } from '../resume/Resume.styles'
 import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react'
 
 class Resume extends Component {
@@ -50,10 +50,10 @@ class Resume extends Component {
   schools = [
     {
       name: `GEORGE BROWN COLLEGE, Toronto, ON`,
-      major: `Computer Programmer Analyst (T127)`,
+      major: `Computer Programmer Analyst`,
       time: `Jan, 2017 - May, 2019`,
       gpa: `3.9/4.0 (as of January, 2019)`,
-      awards: `Dean's Lists (2017, 2018)`,
+      awards: `Dean's Lists (2017, 2018, 2019)`,
     },
     {
       name: `INTERNATIONAL UNIVERSITY – VNU, Vietnam`,
@@ -65,10 +65,9 @@ class Resume extends Component {
   ]
 
   render() {
-    const { classes } = this.props
-
     return (
       <Container>
+        <br />
         <H3 small color="#e86971">
           Resume
         </H3>

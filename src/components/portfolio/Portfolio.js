@@ -31,53 +31,40 @@ const styles = {
 
 const datas = [
   {
-    name: `react`,
-    imageURL: 'images/portfolio/react.png',
+    name: `ChatApp - MERN Stack`,
+    imageURL: 'images/portfolio/chat-app.png',
     cols: 1,
+    link: 'https://github.com/iamhaobui/advancedChatApp',
   },
   {
-    name: `mongodb`,
-    imageURL: 'images/portfolio/mongodb.png',
+    name: `OAuth`,
+    imageURL: 'images/portfolio/oauth.png',
     cols: 2,
+    link: 'https://github.com/iamhaobui/OAuth_Demo',
   },
   {
-    name: `sql`,
-    imageURL: 'images/portfolio/sql.png',
+    name: `Video Store App - MEAN Stack`,
+    imageURL: 'images/portfolio/video-store-app.png',
     cols: 2,
+    link: 'https://github.com/iamhaobui/video_store_app',
   },
   {
-    name: `redux`,
-    imageURL: 'images/portfolio/redux.png',
+    name: `Conference App - Android`,
+    imageURL: 'images/portfolio/conference.png',
     cols: 1,
+    link: 'https://github.com/tddag/conferenceApp',
   },
 
   {
-    name: `mu`,
-    imageURL: 'images/portfolio/mu.png',
-    cols: 1,
+    name: `Capstone Project - MEAN Stack`,
+    imageURL: 'images/portfolio/capstone.png',
+    cols: 2,
+    link: 'https://github.com/franklintrinh367/mean_project',
   },
 ]
 
 class Portfolio extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      tileBar: false,
-    }
-  }
-  renderTileBar = () => {
-    this.setState({
-      tileBar: true,
-    })
-  }
-  hideTileBar = () => {
-    this.setState({
-      tileBar: false,
-    })
-  }
   render() {
-    const { classes } = this.props
-
     return (
       <Container>
         <H3 small color="#e86971">
@@ -88,21 +75,9 @@ class Portfolio extends Component {
           <GridListContainer>
             <GridListStyle cellHeight={160} cols={3}>
               {datas.map((d, index) => (
-                <GridListTileStyle
-                  onMouseOver={() => this.renderTileBar()}
-                  onMouseOut={() => this.hideTileBar()}
-                  key={index}
-                  cols={d.cols || 1}
-                >
+                <GridListTileStyle key={index} cols={d.cols || 1}>
                   <Img src={d.imageURL} alt={d.name} />
-                  {this.state.tileBar && (
-                    <GridListTileBar
-                      style={{
-                        height: '100%',
-                      }}
-                      title={d.name}
-                    />
-                  )}
+                  <GridListTileBar title={d.name} />
                 </GridListTileStyle>
               ))}
             </GridListStyle>
