@@ -41,8 +41,10 @@ export const GridListContainer = styled.div`
   flexwrap: wrap;
   margin: 0 auto;
   over-flow: hidden;
-  width: 750px;
   text-align: center;
+  @media (min-width: 768px) {
+    width: 750px;
+  }
 `
 
 export const GridListStyle = styled(GridList)`
