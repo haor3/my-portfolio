@@ -6,8 +6,7 @@ import Home from './components/home/Home'
 import About from './components/about/About'
 import Resume from './components/resume/Resume'
 import Portfolio from './components/portfolio/Portfolio'
-import { Route, Switch } from 'react-router-dom'
-import { HashLink as Link } from 'react-router-hash-link'
+import { Route } from 'react-router-dom'
 
 class App extends Component {
   render() {
