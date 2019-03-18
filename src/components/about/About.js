@@ -205,7 +205,7 @@ class About extends Component {
             >
               {this.state.strengths.map((step, index) => (
                 <Strength key={step.label}>
-                  {Math.abs(activeStep - index) <= 2 ? (
+                  {Math.abs(activeStep - index) <= 0 ? (
                     <img
                       width="300px"
                       height="300px"
