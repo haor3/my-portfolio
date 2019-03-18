@@ -12,7 +12,7 @@ import { Container, ListStyle, LinkStyle } from './Navigation.styles'
 class Navigation extends React.Component {
   state = {
     open: false,
-    items: ['Home', 'About', 'Resume', 'Portfolio', 'Contact'],
+    items: ['Home', 'About', 'Resume', 'Portfolio'],
   }
 
   handleClick = () => {
