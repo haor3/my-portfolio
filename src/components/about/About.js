@@ -87,7 +87,7 @@ class About extends Component {
     return (
       <Container id="about">
         <Introduce>
-          <AvatarStyle alt="avatar" src="images/portfolio/profile.jpg" />
+          <AvatarStyle alt="avatar" src="images/portfolios/profile.jpg" />
           <Content>
             <H3 small color="#e86971">
               About Me

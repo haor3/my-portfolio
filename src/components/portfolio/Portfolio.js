@@ -32,37 +32,37 @@ const styles = {
 const datas = [
   {
     name: `ChatApp - MERN Stack`,
-    imageURL: 'images/portfolio/chat-app.png',
+    imageURL: 'images/portfolios/chat-app.png',
     cols: 1,
     link: 'https://github.com/iamhaobui/advancedChatApp',
   },
   {
     name: `OAuth`,
-    imageURL: 'images/portfolio/oauth.png',
+    imageURL: 'images/portfolios/oauth.png',
     cols: 2,
     link: 'https://github.com/iamhaobui/OAuth_Demo',
   },
   {
     name: `Video Store App - MEAN Stack`,
-    imageURL: 'images/portfolio/video-store-app.png',
+    imageURL: 'images/portfolios/video-store-app.png',
     cols: 2,
     link: 'https://github.com/iamhaobui/video_store_app',
   },
   {
     name: `Conference App - Android`,
-    imageURL: 'images/portfolio/conference.png',
+    imageURL: 'images/portfolios/conference.png',
     cols: 1,
     link: 'https://github.com/tddag/conferenceApp',
   },
   {
     name: `Portfolio - React`,
-    imageURL: 'images/portfolio/portfolio.png',
+    imageURL: 'images/portfolios/portfolio.png',
     cols: 1,
     link: 'https://github.com/iamhaobui/my-portfolio',
   },
   {
     name: `Capstone Project - MEAN Stack`,
-    imageURL: 'images/portfolio/capstone.png',
+    imageURL: 'images/portfolios/capstone.png',
     cols: 2,
     link: 'https://github.com/franklintrinh367/mean_project',
   },
