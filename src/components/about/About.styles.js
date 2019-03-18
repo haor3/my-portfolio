@@ -107,11 +107,15 @@ export const Misc = styled.div`
 `
 
 export const Strength = styled.div`
-  display: flex;
+  // display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 350px;
+  text-align: center;
 `
 
 export const AvatarStrength = styled(Avatar)`
-  padding: 20px;
-  width: 100px !important;
-  height: 100px !important;
+  // padding: 20px;
+  width: 200px !important;
+  height: 200px !important;
 `

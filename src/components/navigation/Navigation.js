@@ -20,6 +20,7 @@ class Navigation extends React.Component {
   }
 
   render() {
+    // const settings = settings
     return (
       <Container>
         <ListStyle component="nav">

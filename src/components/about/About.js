@@ -11,21 +11,45 @@ import {
   H3,
   Misc,
   Strength,
-  AvatarStrength,
 } from './About.styles.js'
 
 import { LinearProgress } from '@material-ui/core'
 import { withStyles } from '@material-ui/core/styles'
+import SwipeableViews from 'react-swipeable-views'
+import { autoPlay } from 'react-swipeable-views-utils'
+import MobileStepper from '@material-ui/core/MobileStepper'
+import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft'
+import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight'
+import Button from '@material-ui/core/Button'
 
-const styles = {
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews)
+
+const styles = theme => ({
   linearBarColorPrimary: {
     backgroundColor: '#e86971',
   },
   images: {
     objectFit: 'scale-down',
   },
-}
-
+  root: {
+    maxWidth: 400,
+    flexGrow: 1,
+  },
+  header: {
+    display: 'flex',
+    alignItems: 'center',
+    height: 50,
+    paddingLeft: theme.spacing.unit * 4,
+    backgroundColor: theme.palette.background.default,
+  },
+  img: {
+    height: 255,
+    display: 'block',
+    maxWidth: 400,
+    overflow: 'hidden',
+    width: '100%',
+  },
+})
 class About extends Component {
   state = {
     skills: [
@@ -78,11 +102,29 @@ class About extends Component {
       'images/strengths/git.png',
       'images/strengths/heroku.jpg',
     ],
+    activeStep: 0,
+  }
+
+  handleStepChange = activeStep => {
+    this.setState({ activeStep })
+  }
+
+  handleNext = () => {
+    this.setState(prevState => ({
+      activeStep: prevState.activeStep + 1,
+    }))
+  }
+
+  handleBack = () => {
+    this.setState(prevState => ({
+      activeStep: prevState.activeStep - 1,
+    }))
   }
 
   render() {
-    const { classes } = this.props
-
+    const { classes, theme } = this.props
+    const { activeStep, strengths } = this.state
+    const maxSteps = strengths.length
     return (
       <Container id="about">
         <Introduce>
@@ -147,21 +189,73 @@ class About extends Component {
 
         <Misc>
           <H3 color="#e86971">Strength</H3>
-          <Strength>
-            {this.state.strengths.map(s => {
-              return (
-                <AvatarStrength
-                  classes={{ img: classes.images }}
-                  alt="skill"
-                  src={s}
-                />
-              )
-            })}
-          </Strength>
+          <div
+            style={{
+              maxWidth: '400px',
+              margin: '0 auto',
+            }}
+          >
+            <AutoPlaySwipeableViews
+              style={{
+                textAlign: '-webkit-center',
+              }}
+              index={activeStep}
+              onChangeIndex={this.handleStepChange}
+              enableMouseEvents
+            >
+              {this.state.strengths.map((step, index) => (
+                <Strength key={step.label}>
+                  {Math.abs(activeStep - index) <= 2 ? (
+                    <img
+                      width="300px"
+                      height="300px"
+                      style={{ objectFit: 'scale-down' }}
+                      src={step}
+                      alt="skill"
+                    />
+                  ) : null}
+                </Strength>
+              ))}
+            </AutoPlaySwipeableViews>
+            <MobileStepper
+              steps={maxSteps}
+              position="static"
+              activeStep={activeStep}
+              className={classes.mobileStepper}
+              nextButton={
+                <Button
+                  size="small"
+                  onClick={this.handleNext}
+                  disabled={activeStep === maxSteps - 1}
+                >
+                  Next
+                  {theme.direction === 'rtl' ? (
+                    <KeyboardArrowLeft />
+                  ) : (
+                    <KeyboardArrowRight />
+                  )}
+                </Button>
+              }
+              backButton={
+                <Button
+                  size="small"
+                  onClick={this.handleBack}
+                  disabled={activeStep === 0}
+                >
+                  {theme.direction === 'rtl' ? (
+                    <KeyboardArrowRight />
+                  ) : (
+                    <KeyboardArrowLeft />
+                  )}
+                  Back
+                </Button>
+              }
+            />
+          </div>
         </Misc>
       </Container>
     )
   }
 }
 
-export default withStyles(styles)(About)
+export default withStyles(styles, { withTheme: true })(About)
