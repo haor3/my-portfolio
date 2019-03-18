@@ -53,8 +53,7 @@ class About extends Component {
     details: [
       {
         title: 'profile',
-        content: `A Junior Full Stack Developer who graduated from GBC seeks to develop knowledge, skills, relationships 
-        with intelligent and talented people.`,
+        content: `Junior Full Stack Developer who graduated from GBC has enthusiasm in learning and self-development in technology, software to become a professional engineer.`,
       },
       {
         title: 'fullname',
