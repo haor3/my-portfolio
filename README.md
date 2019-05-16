@@ -1,5 +1,5 @@
 # Live Demo
-https://iamhaobui.herokuapp.com/
+haobui.ca
 
 # Run Local
 1. Download the app
