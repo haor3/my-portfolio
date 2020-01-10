@@ -1,6 +1,3 @@
-# Live Demo
-haobui.ca
-
 # Run Local
 1. Download the app
 2. yarn
