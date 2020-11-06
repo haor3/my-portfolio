@@ -3,7 +3,7 @@ import './App.styles'
 
 import Navigation from './components/navigation/Navigation'
 import Home from './components/home/Home'
-import About from './components/about/About'
+import Skill from './components/skill/Skill'
 import Resume from './components/resume/Resume'
 import Portfolio from './components/portfolio/Portfolio'
 import { Route } from 'react-router-dom'
@@ -14,7 +14,7 @@ class App extends Component {
       <section>
         <Navigation />
         <Route to="/" component={Home} />
-        <Route to="about" component={About} />
+        <Route to="about" component={Skill} />
         <Route to="resume" component={Resume} />
         <Route to="portfolio" component={Portfolio} />
       </section>

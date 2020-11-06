@@ -5,34 +5,27 @@ import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react'
 class Resume extends Component {
   experiences = [
     {
-      title: 'Repair And Service Representative',
-      time: 'Jan, 2019 - Present',
-      company: 'AI INCORPORATED, Toronto, ON',
+      title: 'Front End Developer',
+      time: 'Oct, 2019 - Present',
+      company: 'Ansik. Inc, Toronto, ON',
       description: [
-        `Managing shop inventory`,
-        `Shipping out and receiving parts, new machines`,
-        `Troubleshooting mechanical issues`,
-        `Repairing broken machines and replacing motors, sensors and buttons`,
-        `Processing incoming units and data entry through Google drive services`,
+        `Work on Dashboard features by using Javascript ES6, React, MobX and Ant Design library`,
+        `Able to hanlde backend development with NodeJS, TypeScript`,
+        `Follow TDD principles to create unit tests with Jest and Enzyme`,
+        `Design and build REST APIs web services with Swagger`,
+        `Use Postgres to handle SQL queries`,
+        `Enhance data fetching performance > 80% by code optimization, index table`,
       ],
     },
     {
       title: 'Front End Developer, Internship',
-      time: 'Oct, 2018 - Present',
+      time: 'Oct, 2018 - May, 2019',
       company: 'TREASURED, Markham, ON',
       description: [
-        `Modify app component using React and Material UI`,
-        `Working with API and Redux-Saga`,
-      ],
-    },
-    {
-      title: `Web Administrator`,
-      time: `May, 2018 - June, 2018`,
-      company: `SAGAVAPE.COM, Toronto, ON`,
-      description: [
-        `Use HTML/CSS, JavaScript, jQuery to maintain and develop an e-commerce website based on Shopify platform.`,
-        `Implement SEO to get traffic for the website.`,
-        ` Make research about products, write articles and contents.`,
+        `Work side by side with team on front-end by using ReactJS, Redux and Redux-Saga development`,
+        `Implement full-stack features end to end to utilize a mix of back-end and front-end architectures`,
+        `Fix display issues on the site and investigate errors/bugs in code`,
+        `Developed and integrated UI/UX designs for website`,
       ],
     },
     {
@@ -55,24 +48,12 @@ class Resume extends Component {
       gpa: `3.9/4.0 (as of January, 2019)`,
       awards: `Dean's Lists (2017, 2018, 2019)`,
     },
-    {
-      name: `INTERNATIONAL UNIVERSITY – VNU, Vietnam`,
-      major: `Bachelor of Business Administration`,
-      time: `2012 - 2016`,
-      gpa: `3.1/4.0`,
-      awards: ``,
-    },
   ]
 
   render() {
     return (
       <Container id="resume">
         <br />
-        <H3 small color="#e86971">
-          Resume
-        </H3>
-        <H3>More of my credentials.</H3>
-
         <Detail>
           {/* Experience */}
           <H3 small color="#e86971">

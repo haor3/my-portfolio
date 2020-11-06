@@ -12,14 +12,21 @@ class Home extends Component {
   state = {
     social_links: [
       {
+        name: 'email',
+        icon: 'fa fa-envelope',
+        link: 'mailto:iamhaobui@gmail.com',
+      },
+      {
         name: 'linkedin',
         icon: 'fa fa-linkedin',
         link: 'https://www.linkedin.com/in/iamhaobui/',
+        target: 'new',
       },
       {
         name: 'github',
         icon: 'fa fa-github',
         link: 'https://github.com/iamhaobui',
+        target: 'new',
       },
     ],
   }
@@ -28,19 +35,23 @@ class Home extends Component {
     return (
       <Container id="home">
         <IntroContainer>
-          <IntroContent h5>Hello, World.</IntroContent>
-          <IntroContent h1>I'm Hao Bui.</IntroContent>
+          <IntroContent h1>Hao Bui</IntroContent>
           <IntroContent intro-position>
             <span>Full Stack Developer</span>
           </IntroContent>
-          <Button class="stroke smoothscroll" href="#about" title="">
-            More About Me
+          <Button
+            class="stroke smoothscroll"
+            target="new"
+            href="https://drive.google.com/file/d/1iupAcm6iooWBAF3BVWs3kUoE-KR7ExLK/view?usp=sharing"
+            title=""
+          >
+            View Resume
           </Button>
 
           <SocialContainer>
             {this.state.social_links.map(social => {
               return (
-                <SocialContent target="new" href={social.link}>
+                <SocialContent target={social.target} href={social.link}>
                   <i class={social.icon} />
                 </SocialContent>
               )

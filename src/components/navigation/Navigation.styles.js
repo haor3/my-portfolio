@@ -3,19 +3,19 @@ import List from '@material-ui/core/List'
 import { HashLink as Link } from 'react-router-hash-link'
 
 export const Container = styled.div`
-  display: block;
+  height: 50px;
   background: #000000;
-  min-width: 200px;
-  min-height: 45px;
-  left: 70px;
+  width: 100%;
   top: 0;
   position: fixed;
   z-index: 600;
 `
 
 export const ListStyle = styled(List)`
-  flexgrow: 1;
-  width: 200px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  float: right;
   background-color: black;
   color: white !important;
   padding-bottom: 0 !important;
@@ -25,4 +25,8 @@ export const ListStyle = styled(List)`
 export const LinkStyle = styled(Link)`
   text-decoration: none;
   color: white;
+
+  &&:hover {
+    color: grey;
+  }
 `
