@@ -83,14 +83,14 @@ class About extends Component {
     return (
       <Container id="skills">
         <H3 color="#e86971">Skills</H3>
-        <Grid container spacing={1}>
+        <Grid style={{ justifyContent: 'center' }} container spacing={1}>
           {this.state.skills.map((step, index) => {
             return (
               <>
-                <Grid container item xs={3} spacing={3}>
+                <Grid container item lg={3} md={3} xs={5}>
                   <img
-                    width="250px"
-                    height="200px"
+                    width="70%"
+                    height="70%"
                     style={{
                       objectFit: 'scale-down',
                       display: 'block',

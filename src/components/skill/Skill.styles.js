@@ -2,10 +2,10 @@ import styled from 'styled-components'
 
 export const Container = styled.section`
   flex-direction: column;
-  min-height: 550px;
   margin-top: 20px;
   align-items: center;
   display: flex;
+  height: fit-content;
 `
 
 export const H3 = styled.h3`
